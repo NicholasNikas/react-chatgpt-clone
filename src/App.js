@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <section className="side-bar">
+        <button>+ New Chat</button>
+        <ul className="history">
+          <li>Bruh</li>
+          <li>Bright</li>
+        </ul>
+        <nav>
+          <p>Made by Nicholas Nikas</p>
+        </nav>
+      </section>
+      <section className="main">
+        <h1>NikasGPT</h1>
+        <ul className="feed"></ul>
+        <div className="bottom-section">
+          <div className="input-container">
+            <input />
+            <div id="submit">➢</div>
+          </div>
+          <p className="info">
+            NikasGPT is a model using ChatGPT which interacts in a
+            conversational way. The dialogue format makes it possible for
+            NikasGPT to answer followup questions, admit its mistakes, challenge
+            incorrect premises, and reject inappropriate requests.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
