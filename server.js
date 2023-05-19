@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 import express from "express";
 import cors from "cors";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const PORT = 8000;
 
@@ -9,7 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const API_KEY = "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";
+const API_KEY = process.env.API_KEY;
 
 app.post("/completions", async (req, res) => {
   const options = {
